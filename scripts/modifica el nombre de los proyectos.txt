@@ -1,0 +1,9 @@
+modifica el nombre de los proyectos en mayúscula y minúscula.
+
+SELECT CONCAT(nombre, ' ', apellido) AS nombre_completo, 
+       UPPER(nombre_proyecto) AS proyecto_en_mayusculas,
+       LOWER(nombre_proyecto) AS proyecto_en_minusculas
+FROM Empleados e
+INNER JOIN Tareas t ON e.empleado_id = t.empleado_id
+INNER JOIN Proyectos p ON t.proyecto_id = p.proyecto_id;
+ 
