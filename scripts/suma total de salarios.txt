@@ -1,0 +1,6 @@
+Obtener el total de empleados y la suma total de salarios.
+
+use empresa;
+SELECT COUNT(*) AS total_empleados, 
+       SUM(salario) AS total_salarios
+FROM Empleados;
