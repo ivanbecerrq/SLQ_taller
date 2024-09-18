@@ -1,0 +1,8 @@
+Relaciona empleados con sus departamentos a través de los proyectos.
+
+use empresa;
+SELECT e.nombre AS empleado, d.nombre_departamento AS departamento, p.nombre_proyecto AS proyecto
+FROM Empleados e
+INNER JOIN Tareas t ON e.empleado_id = t.empleado_id
+INNER JOIN Proyectos p ON t.proyecto_id = p.proyecto_id
+INNER JOIN Departamentos d ON p.departamento_id = d.departamento_id;
