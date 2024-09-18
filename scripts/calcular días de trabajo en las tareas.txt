@@ -1,0 +1,7 @@
+calcular días de trabajo en las tareas.
+
+use empresa;
+SELECT descripcion, 
+       DATEDIFF(fecha_fin, fecha_inicio) AS duracion_dias, 
+       NOW() AS fecha_actual
+FROM Tareas;
