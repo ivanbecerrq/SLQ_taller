@@ -1,0 +1,10 @@
+Encuentra el departamento con el mayor presupuesto de proyectos.
+
+use empresa;
+SELECT nombre_departamento 
+FROM Departamentos 
+WHERE departamento_id = (
+    SELECT departamento_id 
+    FROM Proyectos 
+    ORDER BY presupuesto DESC LIMIT 1
+);
