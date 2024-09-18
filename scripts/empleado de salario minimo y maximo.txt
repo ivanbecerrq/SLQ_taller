@@ -1,0 +1,12 @@
+Obtener el nombre del empleado con el salario mínimo y el salario máximo 
+
+use empresa;
+SELECT 'Salario Mínimo' AS tipo, nombre, apellido, salario
+FROM Empleados
+WHERE salario = (SELECT MIN(salario) FROM Empleados)
+
+UNION ALL
+
+SELECT 'Salario Máximo' AS tipo, nombre, apellido, salario
+FROM Empleados
+WHERE salario = (SELECT MAX(salario) FROM Empleados);
