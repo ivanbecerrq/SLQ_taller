@@ -1,0 +1,12 @@
+Muestra todos los empleados y todas las tareas, independientemente de si están relacionados.
+
+use empresa;
+SELECT e.nombre AS empleado, t.descripcion AS tarea
+FROM Empleados e
+LEFT JOIN Tareas t ON e.empleado_id = t.empleado_id
+
+UNION
+
+SELECT e.nombre AS empleado, t.descripcion AS tarea
+FROM Empleados e
+RIGHT JOIN Tareas t ON e.empleado_id = t.empleado_id;
